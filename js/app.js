@@ -11,7 +11,7 @@ const fragment = document.createDocumentFragment();
 function addNavbarItem() {
   sections.forEach((section, i) => {
     const navbarItem = document.createElement('li');
-    navbarItem.setAttribute('class', 'menu__item');
+    navbarItem.setAttribute('class', 'navbar__menu');
     navbarItem.innerHTML = `<a href=#section${i} class="menu__link">${section.dataset.nav}</a>`;
     fragment.appendChild(navbarItem);
   });
@@ -54,20 +54,6 @@ function scrollToSection(e) {
   })
 }
 
-// <----hideNavbar---->
-// this function hides navbar when user is not scrolling, apart from when user is hovering over it.
-let scrolling = false;
-
-
-// <----addButtonToTop---->
-// this function adds buttonToTop when user starts scrolling
-
-// <----scrollToTop---->
-// this function scrolls window page to top when buttonToTop is clicked
-
-function scrollToTop() {
-  window.scrollTo(0, 0);
-}
 
 // EVENT LISTENERS
 window.addEventListener('scroll', addActive);
