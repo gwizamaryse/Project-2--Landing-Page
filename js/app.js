@@ -38,13 +38,13 @@ function Active() {
   sections.forEach(section => {
     const rect = section.getBoundingClientRect();
     const Links = document.querySelector(`a[href="#${section.getAttribute('id')}"]`);
-    const sectionHalfShown = section.offsetTop - (section.offsetHeight / 2);
+    const sectionHalf = section.offsetTop - (section.offsetHeight / 2);
     const sectionBehind = section.offsetTop + (section.offsetHeight / 2);
     if (
       (rect.top >= 0) &&
       (rect.left >= 0) &&
       (Math.floor(rect.right) <= window.innerWidth) &&
-      (window.pageYOffset > sectionHalfShown) && (window.pageYOffset <= sectionBehind)) {
+      (window.pageYOffset > sectionHalf) && (window.pageYOffset <= sectionBehind)) {
       section.classList.add('active');
       Links.classList.add('current');
     } else if (window.pageYOffset >= sectionBehind || window.pageYOffset < section.offsetTop) {
