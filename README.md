@@ -14,9 +14,9 @@ Either while clicking or scrolling, the navbar has an active state for the secti
 	├── README.md
 	├── index.html
 	├── css
-	│   ├── styles.css
+	│   ├──styles.css
 	└── js
-		├── app.js
+	    ├──app.js
 ```
 
 ### Tools Required
@@ -31,3 +31,10 @@ All tools required go here. You would require the following tools to develop and
 All installation steps go here.
 
 * To download or clone, use this link: https://github.com/gwizamaryse/Project-2--Landing-Page.git
+
+### Results
+
+To view the final project, visit its page on github pages:
+* follow this link: https://gwizamaryse.github.io/Project-2--Landing-Page/#section1
+
+### END

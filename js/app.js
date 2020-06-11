@@ -5,20 +5,22 @@ const sections = document.querySelectorAll('section');
 const fragment = document.createDocumentFragment();
 const anchorlinks = navbarList.querySelectorAll('a[href^="#"]');
 
+
 // FUNCTIONS
 //Function to create menu items, with each navbart item pointing to the corresponding section id
 
 function addNavbarList() {
   sections.forEach((section, i) => {
-    const menuItem = document.createElement('li');
-    menuItem.setAttribute('class', 'menu__item');
-    menuItem.innerHTML = `<a href=#section${i} class="menu__link">${section.dataset.nav}</a>`;
-    fragment.appendChild(menuItem);
+    var item = document.createElement('li');
+    // item = 11;
+    // items = item;
+    item.setAttribute('class', 'menu__item');
+    item.innerHTML = `<a href=#section${i} class="menu__link">${section.dataset.nav}</a>`;
+    fragment.appendChild(item);
   });
 }
 addNavbarList();
 navbarList.appendChild(fragment);
-
 
 // function to scroll to each section while menu is clicked in the navbar
 function scrollTo(e) {
@@ -53,6 +55,7 @@ function Active() {
     }
   })
 }
+
 
 // EVENT LISTENERS
 window.addEventListener('scroll', Active);
